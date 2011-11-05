@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		577633C51465E82D0011E6F4 /* ConventerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577633C31465E82D0011E6F4 /* ConventerViewController.m */; };
+		577633C61465E82D0011E6F4 /* ConventerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 577633C41465E82D0011E6F4 /* ConventerViewController.xib */; };
 		578321381465A96F007CE0B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578321371465A96F007CE0B7 /* UIKit.framework */; };
 		5783213A1465A96F007CE0B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578321391465A96F007CE0B7 /* Foundation.framework */; };
 		5783213C1465A96F007CE0B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5783213B1465A96F007CE0B7 /* CoreGraphics.framework */; };
@@ -34,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		577633C21465E82D0011E6F4 /* ConventerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConventerViewController.h; sourceTree = "<group>"; };
+		577633C31465E82D0011E6F4 /* ConventerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConventerViewController.m; sourceTree = "<group>"; };
+		577633C41465E82D0011E6F4 /* ConventerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConventerViewController.xib; sourceTree = "<group>"; };
 		578321331465A96F007CE0B7 /* MetricalConventer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetricalConventer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		578321371465A96F007CE0B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		578321391465A96F007CE0B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -118,6 +123,9 @@
 				5783213E1465A96F007CE0B7 /* Supporting Files */,
 				578321661465A99E007CE0B7 /* Conventer.h */,
 				578321671465A99E007CE0B7 /* Conventer.m */,
+				577633C21465E82D0011E6F4 /* ConventerViewController.h */,
+				577633C31465E82D0011E6F4 /* ConventerViewController.m */,
+				577633C41465E82D0011E6F4 /* ConventerViewController.xib */,
 			);
 			path = MetricalConventer;
 			sourceTree = "<group>";
@@ -232,6 +240,7 @@
 			files = (
 				578321421465A96F007CE0B7 /* InfoPlist.strings in Resources */,
 				5783216B1465AF4E007CE0B7 /* unitsByMultiply.plist in Resources */,
+				577633C61465E82D0011E6F4 /* ConventerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +279,7 @@
 				578321441465A96F007CE0B7 /* main.m in Sources */,
 				578321481465A96F007CE0B7 /* SKAppDelegate.m in Sources */,
 				578321681465A99E007CE0B7 /* Conventer.m in Sources */,
+				577633C51465E82D0011E6F4 /* ConventerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
