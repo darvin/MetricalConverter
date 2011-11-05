@@ -17,5 +17,6 @@
 
 - (void) setOperand:(double)operandToSet;
 - (void) setUnit:(NSString*)unitToSet;
+- (NSArray*) availableUnits;
 - (NSDictionary*) getConventered;
 @end

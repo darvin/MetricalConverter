@@ -8,23 +8,44 @@
 		<string>kg</string>
 		<key>Units</key>
 		<dict>
-			<key>lbs eng</key>
-			<string>4</string>
 			<key>lbs</key>
-			<integer>2</integer>
+			<real>2.20462262</real>
+			<key>oz</key>
+			<real>35.2739619</real>
+		
 		</dict>
 	</dict>
-	<key>Length</key>
+	<key>Length (long)</key>
 	<dict>
 		<key>Units</key>
 		<dict>
-			<key>miles</key>
-			<string>2400</string>
-			<key>km</key>
-			<integer>1000</integer>
+			<key>mile</key>
+			<real>1.609344</real>
+			<key>yard</key>
+			<real>1093.6133</real>
+			<key>m</key>
+			<real>1000</real>
+
+		</dict>
+		<key>BaseUnit</key>
+		<string>km</string>
+	</dict>
+	<key>Length (short)</key>
+	<dict>
+		<key>Units</key>
+		<dict>
+			<key>cm</key>
+			<real>0.01</real>
+			<key>inch</key>
+			<real>39.3700787</real>
+			<key>yard</key>
+			<real>1.0936133</real>
+			<key>ft</key>
+			<real>3.2808399</real>
 		</dict>
 		<key>BaseUnit</key>
 		<string>m</string>
 	</dict>
+
 </dict>
 </plist>
