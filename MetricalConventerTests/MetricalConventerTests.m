@@ -7,6 +7,7 @@
 //
 
 #import "MetricalConventerTests.h"
+#import "Conventer.h"
 
 @implementation MetricalConventerTests
 
@@ -14,7 +15,7 @@
 {
     [super setUp];
     
-    // Set-up code here.
+    
 }
 
 - (void)tearDown
@@ -24,9 +25,14 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testConventer
 {
-    STFail(@"Unit tests are not implemented yet in MetricalConventerTests");
+    Conventer * c = [[Conventer alloc] init];
+    [c setOperand:20];
+    [c setUnit:@"kg"];
+    NSDictionary* result = [c getConventered];
+    NSLog(@"%@", result);
+    
 }
 
 @end

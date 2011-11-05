@@ -18,6 +18,9 @@
 		578321521465A96F007CE0B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578321391465A96F007CE0B7 /* Foundation.framework */; };
 		5783215A1465A970007CE0B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 578321581465A970007CE0B7 /* InfoPlist.strings */; };
 		5783215D1465A970007CE0B7 /* MetricalConventerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5783215C1465A970007CE0B7 /* MetricalConventerTests.m */; };
+		578321681465A99E007CE0B7 /* Conventer.m in Sources */ = {isa = PBXBuildFile; fileRef = 578321671465A99E007CE0B7 /* Conventer.m */; };
+		5783216B1465AF4E007CE0B7 /* unitsByMultiply.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5783216A1465AF4E007CE0B7 /* unitsByMultiply.plist */; };
+		5783216C1465AF4E007CE0B7 /* unitsByMultiply.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5783216A1465AF4E007CE0B7 /* unitsByMultiply.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,18 +38,21 @@
 		578321371465A96F007CE0B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		578321391465A96F007CE0B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5783213B1465A96F007CE0B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5783213F1465A96F007CE0B7 /* MetricalConventer-Info.plist */ = {isa = PBXFileReference; path = "MetricalConventer-Info.plist"; sourceTree = "<group>"; };
+		5783213F1465A96F007CE0B7 /* MetricalConventer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MetricalConventer-Info.plist"; sourceTree = "<group>"; };
 		578321411465A96F007CE0B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		578321431465A96F007CE0B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		578321451465A96F007CE0B7 /* MetricalConventer-Prefix.pch */ = {isa = PBXFileReference; path = "MetricalConventer-Prefix.pch"; sourceTree = "<group>"; };
-		578321461465A96F007CE0B7 /* SKAppDelegate.h */ = {isa = PBXFileReference; path = SKAppDelegate.h; sourceTree = "<group>"; };
+		578321451465A96F007CE0B7 /* MetricalConventer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MetricalConventer-Prefix.pch"; sourceTree = "<group>"; };
+		578321461465A96F007CE0B7 /* SKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAppDelegate.h; sourceTree = "<group>"; };
 		578321471465A96F007CE0B7 /* SKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAppDelegate.m; sourceTree = "<group>"; };
 		5783214E1465A96F007CE0B7 /* MetricalConventerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetricalConventerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5783214F1465A96F007CE0B7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		578321571465A970007CE0B7 /* MetricalConventerTests-Info.plist */ = {isa = PBXFileReference; path = "MetricalConventerTests-Info.plist"; sourceTree = "<group>"; };
+		578321571465A970007CE0B7 /* MetricalConventerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MetricalConventerTests-Info.plist"; sourceTree = "<group>"; };
 		578321591465A970007CE0B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5783215B1465A970007CE0B7 /* MetricalConventerTests.h */ = {isa = PBXFileReference; path = MetricalConventerTests.h; sourceTree = "<group>"; };
+		5783215B1465A970007CE0B7 /* MetricalConventerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetricalConventerTests.h; sourceTree = "<group>"; };
 		5783215C1465A970007CE0B7 /* MetricalConventerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetricalConventerTests.m; sourceTree = "<group>"; };
+		578321661465A99E007CE0B7 /* Conventer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conventer.h; sourceTree = "<group>"; };
+		578321671465A99E007CE0B7 /* Conventer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conventer.m; sourceTree = "<group>"; };
+		5783216A1465AF4E007CE0B7 /* unitsByMultiply.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = unitsByMultiply.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +112,12 @@
 		5783213D1465A96F007CE0B7 /* MetricalConventer */ = {
 			isa = PBXGroup;
 			children = (
+				5783216D1465B071007CE0B7 /* Resources */,
 				578321461465A96F007CE0B7 /* SKAppDelegate.h */,
 				578321471465A96F007CE0B7 /* SKAppDelegate.m */,
 				5783213E1465A96F007CE0B7 /* Supporting Files */,
+				578321661465A99E007CE0B7 /* Conventer.h */,
+				578321671465A99E007CE0B7 /* Conventer.m */,
 			);
 			path = MetricalConventer;
 			sourceTree = "<group>";
@@ -141,6 +150,14 @@
 				578321581465A970007CE0B7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5783216D1465B071007CE0B7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5783216A1465AF4E007CE0B7 /* unitsByMultiply.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				578321421465A96F007CE0B7 /* InfoPlist.strings in Resources */,
+				5783216B1465AF4E007CE0B7 /* unitsByMultiply.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5783215A1465A970007CE0B7 /* InfoPlist.strings in Resources */,
+				5783216C1465AF4E007CE0B7 /* unitsByMultiply.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +269,7 @@
 			files = (
 				578321441465A96F007CE0B7 /* main.m in Sources */,
 				578321481465A96F007CE0B7 /* SKAppDelegate.m in Sources */,
+				578321681465A99E007CE0B7 /* Conventer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +433,7 @@
 				578321621465A970007CE0B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		578321631465A970007CE0B7 /* Build configuration list for PBXNativeTarget "MetricalConventerTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +442,7 @@
 				578321651465A970007CE0B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

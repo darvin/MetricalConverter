@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Weight</key>
+	<dict>
+		<key>BaseUnit</key>
+		<string>kg</string>
+		<key>Units</key>
+		<dict>
+			<key>lbs eng</key>
+			<string>4</string>
+			<key>lbs</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>Length</key>
+	<dict>
+		<key>Units</key>
+		<dict>
+			<key>miles</key>
+			<string>2400</string>
+			<key>km</key>
+			<integer>1000</integer>
+		</dict>
+		<key>BaseUnit</key>
+		<string>m</string>
+	</dict>
+</dict>
+</plist>
