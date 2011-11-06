@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		577633C51465E82D0011E6F4 /* ConventerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577633C31465E82D0011E6F4 /* ConventerViewController.m */; };
-		577633C61465E82D0011E6F4 /* ConventerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 577633C41465E82D0011E6F4 /* ConventerViewController.xib */; };
+		5723A8311466E73D007F895B /* ConventerViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5723A82D1466E73D007F895B /* ConventerViewController_iPad.xib */; };
+		5723A83B1466E750007F895B /* ConventerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5723A8361466E750007F895B /* ConventerAppDelegate.m */; };
+		5723A83C1466E750007F895B /* ConventerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5723A8381466E750007F895B /* ConventerViewController.m */; };
+		5723A8401466E7FB007F895B /* ConventerViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5723A83E1466E7FB007F895B /* ConventerViewController_iPhone.xib */; };
 		578321381465A96F007CE0B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578321371465A96F007CE0B7 /* UIKit.framework */; };
 		5783213A1465A96F007CE0B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578321391465A96F007CE0B7 /* Foundation.framework */; };
 		5783213C1465A96F007CE0B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5783213B1465A96F007CE0B7 /* CoreGraphics.framework */; };
 		578321421465A96F007CE0B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 578321401465A96F007CE0B7 /* InfoPlist.strings */; };
 		578321441465A96F007CE0B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 578321431465A96F007CE0B7 /* main.m */; };
-		578321481465A96F007CE0B7 /* SKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 578321471465A96F007CE0B7 /* SKAppDelegate.m */; };
 		578321501465A96F007CE0B7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5783214F1465A96F007CE0B7 /* SenTestingKit.framework */; };
 		578321511465A96F007CE0B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578321371465A96F007CE0B7 /* UIKit.framework */; };
 		578321521465A96F007CE0B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578321391465A96F007CE0B7 /* Foundation.framework */; };
@@ -36,9 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		577633C21465E82D0011E6F4 /* ConventerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConventerViewController.h; sourceTree = "<group>"; };
-		577633C31465E82D0011E6F4 /* ConventerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConventerViewController.m; sourceTree = "<group>"; };
-		577633C41465E82D0011E6F4 /* ConventerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConventerViewController.xib; sourceTree = "<group>"; };
+		5723A82E1466E73D007F895B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ConventerViewController_iPad.xib; sourceTree = "<group>"; };
+		5723A8351466E750007F895B /* ConventerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConventerAppDelegate.h; sourceTree = "<group>"; };
+		5723A8361466E750007F895B /* ConventerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConventerAppDelegate.m; sourceTree = "<group>"; };
+		5723A8371466E750007F895B /* ConventerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConventerViewController.h; sourceTree = "<group>"; };
+		5723A8381466E750007F895B /* ConventerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConventerViewController.m; sourceTree = "<group>"; };
+		5723A83F1466E7FB007F895B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ConventerViewController_iPhone.xib; sourceTree = "<group>"; };
 		578321331465A96F007CE0B7 /* MetricalConventer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetricalConventer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		578321371465A96F007CE0B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		578321391465A96F007CE0B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,8 +51,6 @@
 		578321411465A96F007CE0B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		578321431465A96F007CE0B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		578321451465A96F007CE0B7 /* MetricalConventer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MetricalConventer-Prefix.pch"; sourceTree = "<group>"; };
-		578321461465A96F007CE0B7 /* SKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAppDelegate.h; sourceTree = "<group>"; };
-		578321471465A96F007CE0B7 /* SKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAppDelegate.m; sourceTree = "<group>"; };
 		5783214E1465A96F007CE0B7 /* MetricalConventerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetricalConventerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5783214F1465A96F007CE0B7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		578321571465A970007CE0B7 /* MetricalConventerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MetricalConventerTests-Info.plist"; sourceTree = "<group>"; };
@@ -118,14 +120,13 @@
 			isa = PBXGroup;
 			children = (
 				5783216D1465B071007CE0B7 /* Resources */,
-				578321461465A96F007CE0B7 /* SKAppDelegate.h */,
-				578321471465A96F007CE0B7 /* SKAppDelegate.m */,
 				5783213E1465A96F007CE0B7 /* Supporting Files */,
 				578321661465A99E007CE0B7 /* Conventer.h */,
 				578321671465A99E007CE0B7 /* Conventer.m */,
-				577633C21465E82D0011E6F4 /* ConventerViewController.h */,
-				577633C31465E82D0011E6F4 /* ConventerViewController.m */,
-				577633C41465E82D0011E6F4 /* ConventerViewController.xib */,
+				5723A8351466E750007F895B /* ConventerAppDelegate.h */,
+				5723A8361466E750007F895B /* ConventerAppDelegate.m */,
+				5723A8371466E750007F895B /* ConventerViewController.h */,
+				5723A8381466E750007F895B /* ConventerViewController.m */,
 			);
 			path = MetricalConventer;
 			sourceTree = "<group>";
@@ -163,6 +164,8 @@
 		5783216D1465B071007CE0B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5723A82D1466E73D007F895B /* ConventerViewController_iPad.xib */,
+				5723A83E1466E7FB007F895B /* ConventerViewController_iPhone.xib */,
 				5783216A1465AF4E007CE0B7 /* unitsByMultiply.plist */,
 			);
 			name = Resources;
@@ -240,7 +243,8 @@
 			files = (
 				578321421465A96F007CE0B7 /* InfoPlist.strings in Resources */,
 				5783216B1465AF4E007CE0B7 /* unitsByMultiply.plist in Resources */,
-				577633C61465E82D0011E6F4 /* ConventerViewController.xib in Resources */,
+				5723A8311466E73D007F895B /* ConventerViewController_iPad.xib in Resources */,
+				5723A8401466E7FB007F895B /* ConventerViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,9 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				578321441465A96F007CE0B7 /* main.m in Sources */,
-				578321481465A96F007CE0B7 /* SKAppDelegate.m in Sources */,
 				578321681465A99E007CE0B7 /* Conventer.m in Sources */,
-				577633C51465E82D0011E6F4 /* ConventerViewController.m in Sources */,
+				5723A83B1466E750007F895B /* ConventerAppDelegate.m in Sources */,
+				5723A83C1466E750007F895B /* ConventerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +306,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5723A82D1466E73D007F895B /* ConventerViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5723A82E1466E73D007F895B /* en */,
+			);
+			name = ConventerViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		5723A83E1466E7FB007F895B /* ConventerViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5723A83F1466E7FB007F895B /* en */,
+			);
+			name = ConventerViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
 		578321401465A96F007CE0B7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

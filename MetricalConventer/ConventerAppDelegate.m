@@ -1,22 +1,30 @@
 //
-//  SKAppDelegate.m
-//  MetricalConventer
+//  ConventerAppDelegate.m
+//  Conventer
 //
-//  Created by Sergey Klimov on 05.11.11.
+//  Created by Sergey Klimov on 06.11.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "SKAppDelegate.h"
+#import "ConventerAppDelegate.h"
 
-@implementation SKAppDelegate
+#import "ConventerViewController.h"
+
+@implementation ConventerAppDelegate
 
 @synthesize window = _window;
+@synthesize viewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        self.viewController = [[ConventerViewController alloc] initWithNibName:@"ConventerViewController_iPhone" bundle:nil];
+    } else {
+        self.viewController = [[ConventerViewController alloc] initWithNibName:@"ConventerViewController_iPad" bundle:nil];
+    }
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

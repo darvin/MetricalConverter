@@ -12,5 +12,11 @@
 @interface ConventerViewController : UIViewController
 {
     Conventer * conventer;
+    IBOutlet UILabel* unit;
 }
+
+-(IBAction)unitChanged:(id)sender;
+-(IBAction)valueChanged:(UITextField *)sender;
+
+
 @end
