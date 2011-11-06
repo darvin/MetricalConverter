@@ -10,13 +10,17 @@
 
 @interface Conventer : NSObject
 {
+@private
     double operand;
     NSString* unit;
     NSDictionary* unitsByMultiply;
 }
 
-- (void) setOperand:(double)operandToSet;
-- (void) setUnit:(NSString*)unitToSet;
 - (NSArray*) availableUnits;
 - (NSDictionary*) getConventered;
+
+@property double operand;
+@property (copy) NSString* unit;
+@property (readonly) NSArray* availableUnits;
 @end
+

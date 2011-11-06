@@ -8,8 +8,19 @@
 
 #import "Conventer.h"
 
-@implementation Conventer
 
+@interface Conventer ()
+- (NSArray*) getUnitsOfCategory:(NSString*)category;
+- (NSMutableSet*) getCategoriesForUnit:(NSString*)forUnit;
+- (NSString*) getCategoryForUnit:(NSString*)forUnit1 andUnit:(NSString*)forUnit2;
+- (NSString*) getBaseUnitInCategory:(NSString*)category;
+-(double) getMultiplierForUnit:(NSString*)forUnit inCategory: (NSString*)category;
+-(double) convertFromUnit:(NSString*)fromUnit toUnit:(NSString*)toUnit value:(double)value;
+
+@end
+
+@implementation Conventer
+@synthesize unit, operand;
 -(id) init
 {
     if (self = [super init]) {
@@ -19,13 +30,37 @@
     }
     return self;
 }
-- (void) setOperand:(double)operandToSet
+
+
+- (NSDictionary*) getConventered
 {
-    self->operand = operandToSet;
+    NSSet* categories = [self getCategoriesForUnit:unit];
+    NSMutableDictionary* result = [NSMutableDictionary dictionary];
+    NSMutableArray* unitsToConvert = [NSMutableArray array];
+    for (NSString* category in categories) {
+        [unitsToConvert addObjectsFromArray: [self getUnitsOfCategory:category]];
+    }
+    ;
+    for (NSString *unitToConvert in unitsToConvert) {
+        if (![unitToConvert isEqualToString: self->unit]) {
+            [result setObject:[NSNumber numberWithDouble:[self convertFromUnit:self->unit toUnit:unitToConvert value:self->operand]] forKey:unitToConvert];
+        }
+    }
+    return [NSDictionary dictionaryWithDictionary:result];
 }
-- (void) setUnit:(NSString *)unitToSet
+
+- (NSArray*) availableUnits
 {
-    self->unit = unitToSet;
+    NSMutableSet* result = [NSMutableArray array];
+    for (NSString* category in unitsByMultiply) {
+        NSDictionary* categoryDict = [unitsByMultiply objectForKey:category];
+        [result addObject:[categoryDict objectForKey:@"BaseUnit"]];
+        for (NSString* unitInCategory in [categoryDict objectForKey:@"Units"]) {
+            [result addObject:unitInCategory];
+        }
+    }
+    return [NSArray arrayWithArray:[result allObjects]];
+    
 }
 
 
@@ -94,36 +129,5 @@
     }
 }
 
-
-- (NSDictionary*) getConventered
-{
-    NSSet* categories = [self getCategoriesForUnit:unit];
-    NSMutableDictionary* result = [NSMutableDictionary dictionary];
-    NSMutableArray* unitsToConvert = [NSMutableArray array];
-    for (NSString* category in categories) {
-        [unitsToConvert addObjectsFromArray: [self getUnitsOfCategory:category]];
-    }
-    ;
-    for (NSString *unitToConvert in unitsToConvert) {
-        if (![unitToConvert isEqualToString: self->unit]) {
-            [result setObject:[NSNumber numberWithDouble:[self convertFromUnit:self->unit toUnit:unitToConvert value:self->operand]] forKey:unitToConvert];
-        }
-    }
-    return [NSDictionary dictionaryWithDictionary:result];
-}
-
-- (NSArray*) availableUnits
-{
-    NSMutableSet* result = [NSMutableArray array];
-    for (NSString* category in unitsByMultiply) {
-        NSDictionary* categoryDict = [unitsByMultiply objectForKey:category];
-        [result addObject:[categoryDict objectForKey:@"BaseUnit"]];
-        for (NSString* unitInCategory in [categoryDict objectForKey:@"Units"]) {
-            [result addObject:unitInCategory];
-        }
-    }
-    return [NSArray arrayWithArray:[result allObjects]];
-
-}
 
 @end
