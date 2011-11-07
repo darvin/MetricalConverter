@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Weight</key>
+	<dict>
+		<key>BaseUnit</key>
+		<string>kg</string>
+		<key>Units</key>
+		<dict>
+			<key>lbs</key>
+			<real>2.20462262</real>
+			<key>oz</key>
+			<real>35.2739619</real>
+		
+		</dict>
+	</dict>
+	<key>Length (long)</key>
+	<dict>
+		<key>Units</key>
+		<dict>
+			<key>mile</key>
+			<real>1.609344</real>
+			<key>yard</key>
+			<real>1093.6133</real>
+			<key>m</key>
+			<real>1000</real>
+
+		</dict>
+		<key>BaseUnit</key>
+		<string>km</string>
+	</dict>
+	<key>Length (short)</key>
+	<dict>
+		<key>Units</key>
+		<dict>
+			<key>cm</key>
+			<real>0.01</real>
+			<key>inch</key>
+			<real>39.3700787</real>
+			<key>yard</key>
+			<real>1.0936133</real>
+			<key>ft</key>
+			<real>3.2808399</real>
+		</dict>
+		<key>BaseUnit</key>
+		<string>m</string>
+	</dict>
+
+</dict>
+</plist>

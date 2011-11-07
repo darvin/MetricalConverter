@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5723A8311466E73D007F895B /* ConverterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5723A82D1466E73D007F895B /* ConverterViewController_iPad.xib */; };
+		5723A83B1466E750007F895B /* ConverterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5723A8361466E750007F895B /* ConverterAppDelegate.m */; };
+		5723A83C1466E750007F895B /* ConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5723A8381466E750007F895B /* ConverterViewController.m */; };
+		5723A8401466E7FB007F895B /* ConverterViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5723A83E1466E7FB007F895B /* ConverterViewController_iPhone.xib */; };
+		5767C2AA1467B44D003A6349 /* MetricalConverterTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5767C2A91467B44D003A6349 /* MetricalConverterTests-Info.plist */; };
+		578321381465A96F007CE0B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578321371465A96F007CE0B7 /* UIKit.framework */; };
+		5783213A1465A96F007CE0B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578321391465A96F007CE0B7 /* Foundation.framework */; };
+		5783213C1465A96F007CE0B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5783213B1465A96F007CE0B7 /* CoreGraphics.framework */; };
+		578321421465A96F007CE0B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 578321401465A96F007CE0B7 /* InfoPlist.strings */; };
+		578321441465A96F007CE0B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 578321431465A96F007CE0B7 /* main.m */; };
+		578321501465A96F007CE0B7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5783214F1465A96F007CE0B7 /* SenTestingKit.framework */; };
+		578321511465A96F007CE0B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578321371465A96F007CE0B7 /* UIKit.framework */; };
+		578321521465A96F007CE0B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578321391465A96F007CE0B7 /* Foundation.framework */; };
+		5783215A1465A970007CE0B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 578321581465A970007CE0B7 /* InfoPlist.strings */; };
+		5783215D1465A970007CE0B7 /* MetricalConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5783215C1465A970007CE0B7 /* MetricalConverterTests.m */; };
+		578321681465A99E007CE0B7 /* Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 578321671465A99E007CE0B7 /* Converter.m */; };
+		5783216B1465AF4E007CE0B7 /* unitsByMultiply.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5783216A1465AF4E007CE0B7 /* unitsByMultiply.plist */; };
+		5783216C1465AF4E007CE0B7 /* unitsByMultiply.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5783216A1465AF4E007CE0B7 /* unitsByMultiply.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		578321531465A96F007CE0B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5783212A1465A96F007CE0B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 578321321465A96F007CE0B7;
+			remoteInfo = MetricalConverter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5723A82E1466E73D007F895B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ConverterViewController_iPad.xib; sourceTree = "<group>"; };
+		5723A8351466E750007F895B /* ConverterAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConverterAppDelegate.h; sourceTree = "<group>"; };
+		5723A8361466E750007F895B /* ConverterAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConverterAppDelegate.m; sourceTree = "<group>"; };
+		5723A8371466E750007F895B /* ConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConverterViewController.h; sourceTree = "<group>"; };
+		5723A8381466E750007F895B /* ConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConverterViewController.m; sourceTree = "<group>"; };
+		5723A83F1466E7FB007F895B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ConverterViewController_iPhone.xib; sourceTree = "<group>"; };
+		5767C2A91467B44D003A6349 /* MetricalConverterTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MetricalConverterTests-Info.plist"; sourceTree = "<group>"; };
+		578321331465A96F007CE0B7 /* MetricalConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetricalConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		578321371465A96F007CE0B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		578321391465A96F007CE0B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5783213B1465A96F007CE0B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5783213F1465A96F007CE0B7 /* MetricalConverter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MetricalConverter-Info.plist"; sourceTree = "<group>"; };
+		578321411465A96F007CE0B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		578321431465A96F007CE0B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		578321451465A96F007CE0B7 /* MetricalConverter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MetricalConverter-Prefix.pch"; sourceTree = "<group>"; };
+		5783214E1465A96F007CE0B7 /* MetricalConverterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetricalConverterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5783214F1465A96F007CE0B7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		578321591465A970007CE0B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5783215B1465A970007CE0B7 /* MetricalConverterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetricalConverterTests.h; sourceTree = "<group>"; };
+		5783215C1465A970007CE0B7 /* MetricalConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetricalConverterTests.m; sourceTree = "<group>"; };
+		578321661465A99E007CE0B7 /* Converter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Converter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		578321671465A99E007CE0B7 /* Converter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Converter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5783216A1465AF4E007CE0B7 /* unitsByMultiply.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = unitsByMultiply.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		578321301465A96F007CE0B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				578321381465A96F007CE0B7 /* UIKit.framework in Frameworks */,
+				5783213A1465A96F007CE0B7 /* Foundation.framework in Frameworks */,
+				5783213C1465A96F007CE0B7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5783214A1465A96F007CE0B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				578321501465A96F007CE0B7 /* SenTestingKit.framework in Frameworks */,
+				578321511465A96F007CE0B7 /* UIKit.framework in Frameworks */,
+				578321521465A96F007CE0B7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		578321281465A96F007CE0B7 = {
+			isa = PBXGroup;
+			children = (
+				5783213D1465A96F007CE0B7 /* MetricalConverter */,
+				578321551465A96F007CE0B7 /* MetricalConverterTests */,
+				578321361465A96F007CE0B7 /* Frameworks */,
+				578321341465A96F007CE0B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		578321341465A96F007CE0B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				578321331465A96F007CE0B7 /* MetricalConverter.app */,
+				5783214E1465A96F007CE0B7 /* MetricalConverterTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578321361465A96F007CE0B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578321371465A96F007CE0B7 /* UIKit.framework */,
+				578321391465A96F007CE0B7 /* Foundation.framework */,
+				5783213B1465A96F007CE0B7 /* CoreGraphics.framework */,
+				5783214F1465A96F007CE0B7 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5783213D1465A96F007CE0B7 /* MetricalConverter */ = {
+			isa = PBXGroup;
+			children = (
+				5783216D1465B071007CE0B7 /* Resources */,
+				5783213E1465A96F007CE0B7 /* Supporting Files */,
+				578321661465A99E007CE0B7 /* Converter.h */,
+				578321671465A99E007CE0B7 /* Converter.m */,
+				5723A8351466E750007F895B /* ConverterAppDelegate.h */,
+				5723A8361466E750007F895B /* ConverterAppDelegate.m */,
+				5723A8371466E750007F895B /* ConverterViewController.h */,
+				5723A8381466E750007F895B /* ConverterViewController.m */,
+			);
+			path = MetricalConverter;
+			sourceTree = "<group>";
+		};
+		5783213E1465A96F007CE0B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5783213F1465A96F007CE0B7 /* MetricalConverter-Info.plist */,
+				578321401465A96F007CE0B7 /* InfoPlist.strings */,
+				578321431465A96F007CE0B7 /* main.m */,
+				578321451465A96F007CE0B7 /* MetricalConverter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		578321551465A96F007CE0B7 /* MetricalConverterTests */ = {
+			isa = PBXGroup;
+			children = (
+				5783215B1465A970007CE0B7 /* MetricalConverterTests.h */,
+				5783215C1465A970007CE0B7 /* MetricalConverterTests.m */,
+				578321561465A96F007CE0B7 /* Supporting Files */,
+			);
+			path = MetricalConverterTests;
+			sourceTree = "<group>";
+		};
+		578321561465A96F007CE0B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5767C2A91467B44D003A6349 /* MetricalConverterTests-Info.plist */,
+				578321581465A970007CE0B7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5783216D1465B071007CE0B7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5723A82D1466E73D007F895B /* ConverterViewController_iPad.xib */,
+				5723A83E1466E7FB007F895B /* ConverterViewController_iPhone.xib */,
+				5783216A1465AF4E007CE0B7 /* unitsByMultiply.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		578321321465A96F007CE0B7 /* MetricalConverter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 578321601465A970007CE0B7 /* Build configuration list for PBXNativeTarget "MetricalConverter" */;
+			buildPhases = (
+				5783212F1465A96F007CE0B7 /* Sources */,
+				578321301465A96F007CE0B7 /* Frameworks */,
+				578321311465A96F007CE0B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetricalConverter;
+			productName = MetricalConverter;
+			productReference = 578321331465A96F007CE0B7 /* MetricalConverter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5783214D1465A96F007CE0B7 /* MetricalConverterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 578321631465A970007CE0B7 /* Build configuration list for PBXNativeTarget "MetricalConverterTests" */;
+			buildPhases = (
+				578321491465A96F007CE0B7 /* Sources */,
+				5783214A1465A96F007CE0B7 /* Frameworks */,
+				5783214B1465A96F007CE0B7 /* Resources */,
+				5783214C1465A96F007CE0B7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				578321541465A96F007CE0B7 /* PBXTargetDependency */,
+			);
+			name = MetricalConverterTests;
+			productName = MetricalConverterTests;
+			productReference = 5783214E1465A96F007CE0B7 /* MetricalConverterTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5783212A1465A96F007CE0B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 5783212D1465A96F007CE0B7 /* Build configuration list for PBXProject "MetricalConverter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 578321281465A96F007CE0B7;
+			productRefGroup = 578321341465A96F007CE0B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				578321321465A96F007CE0B7 /* MetricalConverter */,
+				5783214D1465A96F007CE0B7 /* MetricalConverterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		578321311465A96F007CE0B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				578321421465A96F007CE0B7 /* InfoPlist.strings in Resources */,
+				5783216B1465AF4E007CE0B7 /* unitsByMultiply.plist in Resources */,
+				5723A8311466E73D007F895B /* ConverterViewController_iPad.xib in Resources */,
+				5723A8401466E7FB007F895B /* ConverterViewController_iPhone.xib in Resources */,
+				5767C2AA1467B44D003A6349 /* MetricalConverterTests-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5783214B1465A96F007CE0B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5783215A1465A970007CE0B7 /* InfoPlist.strings in Resources */,
+				5783216C1465AF4E007CE0B7 /* unitsByMultiply.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5783214C1465A96F007CE0B7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5783212F1465A96F007CE0B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				578321441465A96F007CE0B7 /* main.m in Sources */,
+				578321681465A99E007CE0B7 /* Converter.m in Sources */,
+				5723A83B1466E750007F895B /* ConverterAppDelegate.m in Sources */,
+				5723A83C1466E750007F895B /* ConverterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		578321491465A96F007CE0B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5783215D1465A970007CE0B7 /* MetricalConverterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		578321541465A96F007CE0B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 578321321465A96F007CE0B7 /* MetricalConverter */;
+			targetProxy = 578321531465A96F007CE0B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5723A82D1466E73D007F895B /* ConverterViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5723A82E1466E73D007F895B /* en */,
+			);
+			name = ConverterViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		5723A83E1466E7FB007F895B /* ConverterViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5723A83F1466E7FB007F895B /* en */,
+			);
+			name = ConverterViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		578321401465A96F007CE0B7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				578321411465A96F007CE0B7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		578321581465A970007CE0B7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				578321591465A970007CE0B7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5783215E1465A970007CE0B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5783215F1465A970007CE0B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		578321611465A970007CE0B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MetricalConverter/MetricalConverter-Prefix.pch";
+				INFOPLIST_FILE = "MetricalConverter/MetricalConverter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		578321621465A970007CE0B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MetricalConverter/MetricalConverter-Prefix.pch";
+				INFOPLIST_FILE = "MetricalConverter/MetricalConverter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		578321641465A970007CE0B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MetricalConverter.app/MetricalConverter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MetricalConverter/MetricalConverter-Prefix.pch";
+				INFOPLIST_FILE = "MetricalConverterTests/MetricalConverterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		578321651465A970007CE0B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MetricalConverter.app/MetricalConverter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MetricalConverter/MetricalConverter-Prefix.pch";
+				INFOPLIST_FILE = "MetricalConverterTests/MetricalConverterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5783212D1465A96F007CE0B7 /* Build configuration list for PBXProject "MetricalConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5783215E1465A970007CE0B7 /* Debug */,
+				5783215F1465A970007CE0B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		578321601465A970007CE0B7 /* Build configuration list for PBXNativeTarget "MetricalConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				578321611465A970007CE0B7 /* Debug */,
+				578321621465A970007CE0B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		578321631465A970007CE0B7 /* Build configuration list for PBXNativeTarget "MetricalConverterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				578321641465A970007CE0B7 /* Debug */,
+				578321651465A970007CE0B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5783212A1465A96F007CE0B7 /* Project object */;
+}
