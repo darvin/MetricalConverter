@@ -60,7 +60,6 @@
         return YES;
     }
 }
-
 -(Converter *) converter
 {
     if (!converter) {

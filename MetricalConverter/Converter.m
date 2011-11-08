@@ -26,12 +26,17 @@
     if (self = [super init]) {
         NSString *path = [[NSBundle mainBundle] pathForResource:
                           @"unitsByMultiply" ofType:@"plist"];
-        unitsByMultiply = [[NSDictionary alloc] initWithContentsOfFile:path]; 
+        unitsByMultiply = [[NSDictionary alloc] initWithContentsOfFile:path];
+        [unitsByMultiply retain];
     }
     return self;
 }
 
-
+-(void) dealloc
+{
+    [unitsByMultiply release];
+    [super dealloc];
+}
 - (NSDictionary*) getConvertered
 {
     NSSet* categories = [self getCategoriesForUnit:unit];
@@ -74,7 +79,7 @@
 
 - (NSMutableSet*) getCategoriesForUnit:(NSString*)forUnit
 {
-    NSMutableSet* result = [[NSMutableSet alloc] init];
+    NSMutableSet* result = [NSMutableSet set];
     for (NSString* category in unitsByMultiply) {
         NSDictionary* categoryDict = [unitsByMultiply objectForKey:category];
         if ([[categoryDict objectForKey:@"BaseUnit"] isEqual:forUnit]){

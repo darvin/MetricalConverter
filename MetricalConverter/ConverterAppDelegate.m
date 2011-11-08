@@ -2,7 +2,7 @@
 //  ConverterAppDelegate.m
 //  Converter
 //
-//  Created by Sergey Klimov on 06.11.11.
+//  Created by Sergey Klimov on 08.11.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -15,14 +15,21 @@
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 
+- (void)dealloc
+{
+    [_window release];
+    [_viewController release];
+    [super dealloc];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[ConverterViewController alloc] initWithNibName:@"ConverterViewController_iPhone" bundle:nil];
+        self.viewController = [[[ConverterViewController alloc] initWithNibName:@"ConverterViewController_iPhone" bundle:nil] autorelease];
     } else {
-        self.viewController = [[ConverterViewController alloc] initWithNibName:@"ConverterViewController_iPad" bundle:nil];
+        self.viewController = [[[ConverterViewController alloc] initWithNibName:@"ConverterViewController_iPad" bundle:nil] autorelease];
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
