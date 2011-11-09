@@ -7,17 +7,13 @@
 //
 
 #import "ConverterViewController.h"
-#import "UnitSelectViewController.h"
-@class UnitSelectViewController;
-
 @interface ConverterViewController()
-@property (readonly, retain) UnitSelectViewController * unitSelectViewController;
 @property (readonly, retain) Converter * converter;
 
 @end
 
 @implementation ConverterViewController
-
+@synthesize unitSelectViewController;
 - (void)refreshResult
 {
     NSLog(@"%@", [converter getConvertered]);
@@ -83,15 +79,6 @@
         converter = [[Converter alloc] init];
     }
     return converter;
-}
-
--(UnitSelectViewController *) unitSelectViewController
-{
-    if (!unitSelectViewController) {
-        unitSelectViewController = [[UnitSelectViewController alloc] init];
-        unitSelectViewController.converterViewControllerDelegate = self;
-    }
-    return unitSelectViewController;
 }
 
 

@@ -9,7 +9,7 @@
 #import "ConverterAppDelegate.h"
 
 #import "ConverterViewController.h"
-
+#import "UnitSelectViewController.h"
 @implementation ConverterAppDelegate
 
 @synthesize window = _window;
@@ -18,8 +18,8 @@
 
 - (void)dealloc
 {
-    [_window release];
     [navigationController release];
+    [_window release];
     [super dealloc];
 }
 
@@ -35,6 +35,11 @@
     } else {
         conventerViewController = [[[ConverterViewController alloc] initWithNibName:@"ConverterViewController_iPad" bundle:nil] autorelease];
     }
+    
+    UnitSelectViewController* unitSelectViewController = [[UnitSelectViewController alloc] init];
+    unitSelectViewController.converterViewControllerDelegate = conventerViewController;
+    conventerViewController.unitSelectViewController = unitSelectViewController;
+    [unitSelectViewController release];
     
     [navigationController pushViewController:conventerViewController animated:NO];
     [self.window addSubview:navigationController.view];

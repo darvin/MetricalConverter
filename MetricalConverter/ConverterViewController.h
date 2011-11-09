@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "Converter.h"
-@class UnitSelectViewController;
 
 
 @protocol ConverterViewControllerDelegate <NSObject>
@@ -21,12 +20,14 @@
     Converter * converter;
     IBOutlet UIButton* unitButton;
     IBOutlet UITextView* resultView;
-    UnitSelectViewController * unitSelectViewController;
+    UIViewController * unitSelectViewController;
+    
 }
 
 -(IBAction)unitChange:(id)sender;
 -(IBAction)valueChanged:(UITextField *)sender;
 @property (readonly) NSArray* availableUnits;
 @property (copy) NSString* currentUnit;
+@property (retain) UIViewController * unitSelectViewController;
 
 @end
