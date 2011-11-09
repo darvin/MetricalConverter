@@ -45,7 +45,6 @@
     for (NSString* category in categories) {
         [unitsToConvert addObjectsFromArray: [self getUnitsOfCategory:category]];
     }
-    ;
     for (NSString *unitToConvert in unitsToConvert) {
         if (![unitToConvert isEqualToString: self->unit]) {
             [result setObject:[NSNumber numberWithDouble:[self convertFromUnit:self->unit toUnit:unitToConvert value:self->operand]] forKey:unitToConvert];
@@ -77,7 +76,7 @@
     return [NSArray arrayWithArray:result];
 }
 
-- (NSMutableSet*) getCategoriesForUnit:(NSString*)forUnit
+- (NSSet*) getCategoriesForUnit:(NSString*)forUnit
 {
     NSMutableSet* result = [NSMutableSet set];
     for (NSString* category in unitsByMultiply) {
@@ -91,15 +90,14 @@
             }
         }
     }
-    return result;
+    return [NSSet setWithSet:result];
 }
 
 - (NSString*) getCategoryForUnit:(NSString*)forUnit1 andUnit:(NSString*)forUnit2
 {
-    NSMutableSet* commonCategories = [self getCategoriesForUnit:forUnit1];
+    NSMutableSet* commonCategories = [NSMutableSet setWithSet:[self getCategoriesForUnit:forUnit1]];
     [commonCategories intersectSet: [self getCategoriesForUnit:forUnit2]];
     return [commonCategories anyObject];
-    
 }
 
 
