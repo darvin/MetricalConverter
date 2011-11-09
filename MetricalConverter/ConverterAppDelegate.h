@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class ConverterViewController;
+//@class ConverterViewController;
 
 @interface ConverterAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ConverterViewController *viewController;
+//@property (strong, nonatomic) ConverterViewController *viewController;
 
 @end

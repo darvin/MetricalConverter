@@ -56,7 +56,7 @@
 
 - (NSArray*) availableUnits
 {
-    NSMutableSet* result = [NSMutableArray array];
+    NSMutableSet* result = [NSMutableSet set];
     for (NSString* category in unitsByMultiply) {
         NSDictionary* categoryDict = [unitsByMultiply objectForKey:category];
         [result addObject:[categoryDict objectForKey:@"BaseUnit"]];

@@ -8,15 +8,27 @@
 
 #import <UIKit/UIKit.h>
 #import "Converter.h"
+@class UnitSelectViewController;
 
-@interface ConverterViewController : UIViewController
+
+@protocol ConverterViewControllerDelegate <NSObject>
+@property (readonly) NSArray* availableUnits;
+@property (copy) NSString* currentUnit;
+@end
+
+@interface ConverterViewController : UIViewController <ConverterViewControllerDelegate>
 {
     Converter * converter;
-    IBOutlet UILabel* unit;
+    IBOutlet UIButton* unitButton;
+    IBOutlet UITextView* resultView;
+    UnitSelectViewController * unitSelectViewController;
 }
 
--(IBAction)unitChanged:(id)sender;
+-(IBAction)unitChange:(id)sender;
 -(IBAction)valueChanged:(UITextField *)sender;
-
+@property (readonly, retain) UnitSelectViewController * unitSelectViewController;
+@property (readonly, retain) Converter * converter;
+@property (readonly) NSArray* availableUnits;
+@property (copy) NSString* currentUnit;
 
 @end
