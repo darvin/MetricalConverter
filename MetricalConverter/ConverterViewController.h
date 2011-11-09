@@ -26,8 +26,6 @@
 
 -(IBAction)unitChange:(id)sender;
 -(IBAction)valueChanged:(UITextField *)sender;
-@property (readonly, retain) UnitSelectViewController * unitSelectViewController;
-@property (readonly, retain) Converter * converter;
 @property (readonly) NSArray* availableUnits;
 @property (copy) NSString* currentUnit;
 

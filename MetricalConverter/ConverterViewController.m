@@ -10,6 +10,11 @@
 #import "UnitSelectViewController.h"
 @class UnitSelectViewController;
 
+@interface ConverterViewController()
+@property (readonly, retain) UnitSelectViewController * unitSelectViewController;
+@property (readonly, retain) Converter * converter;
+
+@end
 
 @implementation ConverterViewController
 
@@ -123,6 +128,7 @@
 -(void) dealloc
 {
     [unitSelectViewController release];
+    [converter release];
     [super dealloc];
 }
 

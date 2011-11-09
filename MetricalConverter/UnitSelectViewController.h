@@ -11,7 +11,6 @@
 @interface UnitSelectViewController : UITableViewController
 {
     
-    NSMutableArray *listOfItems;
     id<ConverterViewControllerDelegate> converterViewControllerDelegate;
 }
 @property (assign) id<ConverterViewControllerDelegate> converterViewControllerDelegate;

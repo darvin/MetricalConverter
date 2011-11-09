@@ -41,8 +41,6 @@
 
 //dealloc method declared in RootViewController.m
 - (void)dealloc {
-    
-    [listOfItems release];
     [super dealloc];
 }
 
