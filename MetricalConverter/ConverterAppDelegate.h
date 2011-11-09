@@ -11,7 +11,9 @@
 //@class ConverterViewController;
 
 @interface ConverterAppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+    UINavigationController *navigationController;
+}
 @property (strong, nonatomic) UIWindow *window;
 
 //@property (strong, nonatomic) ConverterViewController *viewController;
