@@ -12,12 +12,9 @@
 
 
 
-@interface ConverterViewController : UIViewController <UnitSelectViewControllerDelegate, UISplitViewControllerDelegate, UITextInputDelegate>
+@interface ConverterViewController : UITableViewController <UnitSelectViewControllerDelegate, UISplitViewControllerDelegate, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 {
     Converter * converter;
-    IBOutlet UIButton* unitButton;
-    IBOutlet UITextView* resultView;
-    IBOutlet UITextField* valueEdit;
     UIViewController * unitSelectViewController;
     
 }

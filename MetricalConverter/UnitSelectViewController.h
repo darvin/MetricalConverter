@@ -18,7 +18,7 @@
 
 @end
 
-@interface UnitSelectViewController : UITableViewController
+@interface UnitSelectViewController : UITableViewController <UITableViewDataSource>
 {
     
     id<UnitSelectViewControllerDelegate> delegate;
