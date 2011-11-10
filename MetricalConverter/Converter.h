@@ -16,8 +16,8 @@
     NSDictionary* unitsByMultiply;
 }
 
-- (NSArray*) availableUnits;
 - (NSDictionary*) getConvertered;
+//-(double) computeRPNResult: (NSString*) rpn;
 
 @property double operand;
 @property (copy) NSString* unit;

@@ -131,6 +131,42 @@
         return [self convertFromUnit:baseUnit toUnit:toUnit value:baseValue];
     }
 }
-
-
+//
+//-(double) computeRPNResult: (NSString*) rpn
+//{
+//    int c,err;
+//    double x,y;
+//    char *q;
+//    char *rpstr = "3 6 *";
+//    char *p = rpstr;
+//    NSMutableArray *stk = [NSMutableArray new];
+//#define POP(z)  z = [[stk lastObject] doubleValue]; [stk removeLastObject]
+////    const char * rpnCString = "3 6 *"; ///[rpn UTF8String];
+//    err = 0;
+//    while (NULL!=(q=strtok(p," \t")))  {
+//        x = strtod(q,&p);  err = *p;
+//        p = NULL;
+//        if (err)  {
+//            err = q[1] || NULL==strchr("+-*/",*q) || 2>[stk count];
+//            NSLog(@"%d,%d,%d",  q[1] , NULL==strchr("+-*/",*q) , 2>[stk count]);
+//            if (err)  break;
+//            POP(y);  POP(x);
+//            switch (*q)  {
+//                case '+': x += y; break;
+//                case '-': x -= y; break;
+//                case '*': x *= y; break;
+//                case '/': x /= y;
+//            }
+//        }
+//        [stk addObject:[NSNumber numberWithDouble:x]];
+//    }
+//    if (err || 1<[stk count])  puts("error");
+//    else  if ([stk count])  {
+//        POP(x);  
+//        printf("%f\n",x);
+//    }
+//
+//return 0;
+//}
+//
 @end

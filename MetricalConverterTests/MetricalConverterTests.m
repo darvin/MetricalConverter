@@ -59,10 +59,12 @@
         error = fabs(originalValue-newestValue);
         NSLog(@"%f %@ -> %f %@", newValue, newUnit, newestValue, unit);
         STAssertEqualsWithAccuracy(originalValue, newestValue, 0.00001, @"We expected %d, but it was %d", originalValue, newestValue);
-        
     }
-    
-    
 }
+//-(void) testRPN
+//{
+//    Converter * c = [[Converter alloc] init];
+//    NSLog(@"%f", [c computeRPNResult:@"2 3+"]);
+//}
 
 @end
