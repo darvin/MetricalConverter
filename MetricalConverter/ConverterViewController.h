@@ -15,7 +15,7 @@
 @property (copy) NSString* currentUnit;
 @end
 
-@interface ConverterViewController : UIViewController <ConverterViewControllerDelegate>
+@interface ConverterViewController : UIViewController <ConverterViewControllerDelegate,UISplitViewControllerDelegate>
 {
     Converter * converter;
     IBOutlet UIButton* unitButton;
@@ -29,5 +29,6 @@
 @property (readonly) NSArray* availableUnits;
 @property (copy) NSString* currentUnit;
 @property (retain) UIViewController * unitSelectViewController;
+
 
 @end

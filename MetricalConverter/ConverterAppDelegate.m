@@ -13,36 +13,51 @@
 @implementation ConverterAppDelegate
 
 @synthesize window = _window;
-//@synthesize viewController = _viewController;
-
+@synthesize navigationController = _navigationController;
+@synthesize splitViewController = _splitViewController;
 
 - (void)dealloc
 {
-    [navigationController release];
     [_window release];
+    [_navigationController release];
+    [_splitViewController release];
     [super dealloc];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    navigationController = [[UINavigationController alloc] init];
-    ConverterViewController* conventerViewController;
+    
+    
+    ConverterViewController *converterViewController;
+    UnitSelectViewController *unitSelectViewController;
+
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        conventerViewController = [[[ConverterViewController alloc] initWithNibName:@"ConverterViewController_iPhone" bundle:nil] autorelease];
+        converterViewController = [[[ConverterViewController alloc] initWithNibName:@"ConverterViewController_iPhone" bundle:nil] autorelease];
+        unitSelectViewController= [[[UnitSelectViewController alloc] initWithNibName:@"UnitSelectViewController_iPhone" bundle:nil] autorelease];
+        self.navigationController = [[[UINavigationController alloc] initWithRootViewController:converterViewController] autorelease];
+        self.window.rootViewController = self.navigationController;
     } else {
-        conventerViewController = [[[ConverterViewController alloc] initWithNibName:@"ConverterViewController_iPad" bundle:nil] autorelease];
+        
+        
+        converterViewController = [[[ConverterViewController alloc] initWithNibName:@"ConverterViewController_iPad" bundle:nil] autorelease];
+        unitSelectViewController= [[[UnitSelectViewController alloc] initWithNibName:@"UnitSelectViewController_iPad" bundle:nil] autorelease];
+        UINavigationController *masterNavigationController = [[[UINavigationController alloc] initWithRootViewController:unitSelectViewController] autorelease];
+        UINavigationController *detailNavigationController = [[[UINavigationController alloc] initWithRootViewController:converterViewController] autorelease];
+    	
+        self.splitViewController = [[[UISplitViewController alloc] init] autorelease];
+        self.splitViewController.delegate = converterViewController;
+        self.splitViewController.viewControllers = [NSArray arrayWithObjects:masterNavigationController, detailNavigationController, nil];
+        
+        self.window.rootViewController = self.splitViewController;
     }
     
-    UnitSelectViewController* unitSelectViewController = [[UnitSelectViewController alloc] init];
-    unitSelectViewController.converterViewControllerDelegate = conventerViewController;
-    conventerViewController.unitSelectViewController = unitSelectViewController;
-    [unitSelectViewController release];
     
-    [navigationController pushViewController:conventerViewController animated:NO];
-    [self.window addSubview:navigationController.view];
+    unitSelectViewController.converterViewControllerDelegate = converterViewController;
+    converterViewController.unitSelectViewController = unitSelectViewController;
     
     [self.window makeKeyAndVisible];
     return YES;

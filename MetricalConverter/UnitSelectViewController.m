@@ -54,8 +54,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -83,6 +82,5 @@
     NSString *cellValue = [self.converterViewControllerDelegate.availableUnits objectAtIndex:indexPath.row];
     self.converterViewControllerDelegate.currentUnit = cellValue;
 }
-
 
 @end

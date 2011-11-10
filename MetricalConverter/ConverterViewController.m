@@ -9,16 +9,18 @@
 #import "ConverterViewController.h"
 @interface ConverterViewController()
 @property (readonly, retain) Converter * converter;
-
+@property (strong, nonatomic) UIPopoverController *masterPopoverController;
 @end
 
 @implementation ConverterViewController
 @synthesize unitSelectViewController;
+@synthesize masterPopoverController = _masterPopoverController;
+
 - (void)refreshResult
 {
-    NSLog(@"%@", [converter getConvertered]);
-    resultView.text = [[converter getConvertered] description];
-    [unitButton  setTitle:converter.unit forState:UIControlStateNormal];
+    NSLog(@"%@", [self.converter getConvertered]);
+    resultView.text = [[self.converter getConvertered] description];
+    [unitButton  setTitle:self.converter.unit forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,7 +46,8 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [self refreshResult];
     [super viewWillAppear:animated];
 }
 - (void)viewDidAppear:(BOOL)animated
@@ -56,7 +59,7 @@
 
 - (void) viewWillDisappear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) [self.navigationController setNavigationBarHidden:NO animated:animated];
     [super viewWillDisappear:animated];
 }
 - (void)viewDidDisappear:(BOOL)animated
@@ -64,14 +67,23 @@
 	[super viewDidDisappear:animated];
 }
 
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = NSLocalizedString(@"Convert", @"Convert");
+        self.converter.unit = [self.converter.availableUnits objectAtIndex:0];
+        self.converter.operand = 1;
+    }
+    return self;
+}
+
+
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
+    return YES;
 }
 -(Converter *) converter
 {
@@ -86,13 +98,15 @@
 {
     NSString* newValue = [sender text];
     NSLog(@"%@", newValue);
-    [converter setOperand:[newValue doubleValue]];
+    self.converter.operand = [newValue doubleValue];
     [self refreshResult];
 }
 -(IBAction)unitChange:(id)sender
 {
-    [self.navigationController pushViewController:self.unitSelectViewController animated:YES];
     
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        [self.navigationController pushViewController:self.unitSelectViewController animated:YES];
+    }
 }
 
 -(NSArray*) availableUnits
@@ -116,7 +130,39 @@
 {
     [unitSelectViewController release];
     [converter release];
+    [_masterPopoverController release];
+    
     [super dealloc];
 }
+
+
+#pragma mark - Split view
+
+- (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
+{
+    barButtonItem.title = NSLocalizedString(@"Units", @"Units");
+    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
+    self.masterPopoverController = popoverController;
+}
+
+- (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+{
+    // Called when the view is shown again in the split view, invalidating the button and popover controller.
+    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
+    self.masterPopoverController = nil;
+}
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string { 
+    NSMutableCharacterSet* numbersAndPoint = [NSMutableCharacterSet decimalDigitCharacterSet];
+    [numbersAndPoint formUnionWithCharacterSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
+    
+    NSCharacterSet *nonNumberSet = [numbersAndPoint invertedSet];
+
+    return ([string stringByTrimmingCharactersInSet:nonNumberSet].length > 0);
+}
+
+
+
 
 @end
