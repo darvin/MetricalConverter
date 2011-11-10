@@ -67,9 +67,11 @@
         cell = [[[UITableViewCell alloc] init] autorelease];
     }
     
-    // Set up the cell...
-    NSString *cellValue = [[self.delegate unitSelectViewControllerAvailableUnits:self] objectAtIndex:indexPath.row];
-    cell.textLabel.text = cellValue;
+    NSString *unitName = [[self.delegate unitSelectViewControllerAvailableUnits:self] objectAtIndex:indexPath.row];
+    
+    
+    
+    cell.textLabel.text = NSLocalizedStringWithDefaultValue(unitName, nil, [NSBundle mainBundle] , unitName, @"unit name localization");
     
     return cell;
 }

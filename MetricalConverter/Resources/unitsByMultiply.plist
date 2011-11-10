@@ -20,7 +20,7 @@
 		<dict>
 			<key>mile</key>
 			<real>1.609344</real>
-			<key>yard</key>
+			<key>yd</key>
 			<real>1093.6133</real>
 			<key>m</key>
 			<real>1000</real>
@@ -36,7 +36,7 @@
 			<integer>100</integer>
 			<key>inch</key>
 			<real>39.3700787</real>
-			<key>yard</key>
+			<key>yd</key>
 			<real>1.0936133</real>
 			<key>ft</key>
 			<real>3.2808399</real>
