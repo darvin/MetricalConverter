@@ -20,12 +20,14 @@
     Converter * converter;
     IBOutlet UIButton* unitButton;
     IBOutlet UITextView* resultView;
+    IBOutlet UITextField* valueEdit;
     UIViewController * unitSelectViewController;
     
 }
 
 -(IBAction)unitChange:(id)sender;
 -(IBAction)valueChanged:(UITextField *)sender;
+
 @property (readonly) NSArray* availableUnits;
 @property (copy) NSString* currentUnit;
 @property (retain) UIViewController * unitSelectViewController;
