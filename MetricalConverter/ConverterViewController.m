@@ -109,22 +109,19 @@
     }
 }
 
--(NSArray*) availableUnits
+- (NSArray*)unitSelectViewControllerAvailableUnits:(UnitSelectViewController *)unitSelectViewController
 {
     return self.converter.availableUnits;
 }
-
--(NSString*) currentUnit
+- (NSString*)unitSelectViewControllerCurrentUnit:(UnitSelectViewController *)unitSelectViewController
 {
     return self.converter.unit;
 }
-
-
--(void) setCurrentUnit:(NSString*) newUnit
+- (void)unitSelectViewController:(UnitSelectViewController *)unitSelectViewController willSetCurrentUnit:(NSString*) newCurrentUnit
 {
-    self.converter.unit = newUnit;
-    [self refreshResult];
+    self.converter.unit = newCurrentUnit;
 }
+
 
 -(void) dealloc
 {
@@ -167,6 +164,11 @@
     return YES;
 }
 
+
+- (void)selectionWillChange:(id <UITextInput>)textInput{};
+- (void)selectionDidChange:(id <UITextInput>)textInput{};
+- (void)textWillChange:(id <UITextInput>)textInput{};
+- (void)textDidChange:(id <UITextInput>)textInput{};
 
 
 @end

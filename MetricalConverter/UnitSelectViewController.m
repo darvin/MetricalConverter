@@ -8,8 +8,9 @@
 
 #import "UnitSelectViewController.h"
 
+
 @implementation UnitSelectViewController
-@synthesize converterViewControllerDelegate;
+@synthesize delegate;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -34,7 +35,7 @@
     self.navigationItem.title = @"Select unit";
 }
 - (void)viewDidAppear:(BOOL)animated {
-    int i = [self.converterViewControllerDelegate.availableUnits indexOfObject:self.converterViewControllerDelegate.currentUnit];
+    int i = [[self.delegate unitSelectViewControllerAvailableUnits:self] indexOfObject:[self.delegate unitSelectViewControllerCurrentUnit:self]];
     NSIndexPath *indexPath=[NSIndexPath indexPathForRow:i inSection:0];
     [self.tableView selectRowAtIndexPath:indexPath animated:animated  scrollPosition:UITableViewScrollPositionBottom];
 }
@@ -67,20 +68,20 @@
     }
     
     // Set up the cell...
-    NSString *cellValue = [self.converterViewControllerDelegate.availableUnits objectAtIndex:indexPath.row];
+    NSString *cellValue = [[self.delegate unitSelectViewControllerAvailableUnits:self] objectAtIndex:indexPath.row];
     cell.textLabel.text = cellValue;
     
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.converterViewControllerDelegate.availableUnits count];
+    return [[self.delegate unitSelectViewControllerAvailableUnits:self] count];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellValue = [self.converterViewControllerDelegate.availableUnits objectAtIndex:indexPath.row];
-    self.converterViewControllerDelegate.currentUnit = cellValue;
+    NSString *cellValue = [[self.delegate unitSelectViewControllerAvailableUnits:self] objectAtIndex:indexPath.row];
+    [self.delegate unitSelectViewController:self willSetCurrentUnit: cellValue];
 }
 
 

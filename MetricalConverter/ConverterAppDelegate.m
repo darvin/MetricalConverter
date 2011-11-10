@@ -56,7 +56,7 @@
     }
     
     
-    unitSelectViewController.converterViewControllerDelegate = converterViewController;
+    unitSelectViewController.delegate = converterViewController;
     converterViewController.unitSelectViewController = unitSelectViewController;
     
     [self.window makeKeyAndVisible];

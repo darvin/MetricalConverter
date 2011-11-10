@@ -7,12 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ConverterViewController.h"
+
+@class UnitSelectViewController;
+@protocol UnitSelectViewControllerDelegate <NSObject>
+
+- (NSArray*)unitSelectViewControllerAvailableUnits:(UnitSelectViewController *)unitSelectViewController;
+- (NSString*)unitSelectViewControllerCurrentUnit:(UnitSelectViewController *)unitSelectViewController ;
+- (void)unitSelectViewController:(UnitSelectViewController *)unitSelectViewController willSetCurrentUnit:(NSString*) newCurrentUnit;
+
+
+@end
+
 @interface UnitSelectViewController : UITableViewController
 {
     
-    id<ConverterViewControllerDelegate> converterViewControllerDelegate;
+    id<UnitSelectViewControllerDelegate> delegate;
 }
-@property (assign) id<ConverterViewControllerDelegate> converterViewControllerDelegate;
+@property (assign) id<UnitSelectViewControllerDelegate> delegate;
 
 @end

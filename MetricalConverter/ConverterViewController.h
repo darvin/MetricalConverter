@@ -8,14 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Converter.h"
+#import "UnitSelectViewController.h"
 
 
-@protocol ConverterViewControllerDelegate <NSObject>
-@property (readonly) NSArray* availableUnits;
-@property (copy) NSString* currentUnit;
-@end
 
-@interface ConverterViewController : UIViewController <ConverterViewControllerDelegate,UISplitViewControllerDelegate>
+@interface ConverterViewController : UIViewController <UnitSelectViewControllerDelegate, UISplitViewControllerDelegate, UITextInputDelegate>
 {
     Converter * converter;
     IBOutlet UIButton* unitButton;
@@ -27,9 +24,6 @@
 
 -(IBAction)unitChange:(id)sender;
 -(IBAction)valueChanged:(UITextField *)sender;
-
-@property (readonly) NSArray* availableUnits;
-@property (copy) NSString* currentUnit;
 @property (retain) UIViewController * unitSelectViewController;
 
 
