@@ -12,7 +12,6 @@
 			<real>2.20462262</real>
 			<key>oz</key>
 			<real>35.2739619</real>
-		
 		</dict>
 	</dict>
 	<key>Length (long)</key>
@@ -25,7 +24,6 @@
 			<real>1093.6133</real>
 			<key>m</key>
 			<real>1000</real>
-
 		</dict>
 		<key>BaseUnit</key>
 		<string>km</string>
@@ -35,7 +33,7 @@
 		<key>Units</key>
 		<dict>
 			<key>cm</key>
-			<real>0.01</real>
+			<integer>100</integer>
 			<key>inch</key>
 			<real>39.3700787</real>
 			<key>yard</key>
@@ -46,6 +44,5 @@
 		<key>BaseUnit</key>
 		<string>m</string>
 	</dict>
-
 </dict>
 </plist>
