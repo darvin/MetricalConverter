@@ -229,7 +229,7 @@
         NSString* cellUnit = [resultKeys objectAtIndex:indexPath.row];
         NSNumber* cellValue = [result objectForKey:cellUnit];
         NSLog(@"%@ - %@", cellUnit, cellValue);
-        cell.textLabel.text = cellUnit;
+        cell.textLabel.text = NSLocalizedStringWithDefaultValue(cellUnit, nil, [NSBundle mainBundle] , cellUnit, @"unit name localization");;
         NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
         [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
         cell.detailTextLabel.text = [formatter stringFromNumber:cellValue];
