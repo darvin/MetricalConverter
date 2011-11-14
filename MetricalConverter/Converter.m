@@ -28,6 +28,8 @@
                           @"unitsByMultiply" ofType:@"plist"];
         unitsByMultiply = [[NSDictionary alloc] initWithContentsOfFile:path];
         [unitsByMultiply retain];
+        self.operand = 0;
+        self.unit = [[self availableUnits] objectAtIndex:0];
     }
     return self;
 }

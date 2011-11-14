@@ -24,7 +24,7 @@
         self.navigationItem.rightBarButtonItem.title = self.converter.unit;
     }
     NSLog(@"%@ %@", self.tableView.delegate, self.tableView.dataSource);
-    [self.tableView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,7 +79,7 @@
         self.converter = [[Converter alloc] init];
         self.title = NSLocalizedString(@"Convert", @"Convert");
         self.converter.unit = [self.converter.availableUnits objectAtIndex:0];
-        self.converter.operand = 1;
+        self.converter.operand = 0;
     }
     return self;
 }
@@ -98,6 +98,15 @@
     NSLog(@"%@", newValue);
     self.converter.operand = [newValue doubleValue];
     [self refreshResult];
+    
+    NSMutableArray * rowsToReload = [[NSMutableArray alloc] init];
+    NSIndexPath* indexPath;
+    for (int i=0; i<[[self.converter getConvertered] count]; i++) {
+        indexPath = [NSIndexPath indexPathForRow:i inSection:1];
+        [rowsToReload addObject:indexPath];
+    }
+    [self.tableView reloadRowsAtIndexPaths:rowsToReload withRowAnimation:UITableViewRowAnimationFade];
+    [rowsToReload release];
 }
 
 -(IBAction)unitChange:(id)sender
@@ -131,6 +140,7 @@
 {
     self.converter.unit = newCurrentUnit;
     [self refreshResult];
+    [self.tableView reloadData];
 }
 
 
@@ -208,7 +218,7 @@
             valueTextField.returnKeyType = UIReturnKeyDone;
             valueTextField.delegate = self;
             [valueTextField setEnabled: YES];
-            [valueTextField addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventEditingDidEnd];
+            [valueTextField addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventEditingChanged];
             cell.textLabel.text = @"Enter value:";
             [cell.contentView addSubview:valueTextField];
             
