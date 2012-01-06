@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5723A83B1466E750007F895B /* ConverterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5723A8361466E750007F895B /* ConverterAppDelegate.m */; };
 		5723A83C1466E750007F895B /* ConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5723A8381466E750007F895B /* ConverterViewController.m */; };
+		5744CA0014B44C490005A1E0 /* app_icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 5744C9FF14B44C490005A1E0 /* app_icon_57.png */; };
+		5744CA0214B44C500005A1E0 /* app_icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 5744CA0114B44C500005A1E0 /* app_icon_114.png */; };
+		5744CA0414B44C5D0005A1E0 /* app_icon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5744CA0314B44C5D0005A1E0 /* app_icon_72.png */; };
 		5767C2AA1467B44D003A6349 /* MetricalConverterTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5767C2A91467B44D003A6349 /* MetricalConverterTests-Info.plist */; };
 		5768F010146C3F6B00A55201 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5768F008146C3F6B00A55201 /* InfoPlist.strings */; };
 		5768F011146C3F6B00A55201 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5768F00A146C3F6B00A55201 /* Localizable.strings */; };
@@ -48,6 +51,9 @@
 		5723A8361466E750007F895B /* ConverterAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConverterAppDelegate.m; sourceTree = "<group>"; };
 		5723A8371466E750007F895B /* ConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConverterViewController.h; sourceTree = "<group>"; };
 		5723A8381466E750007F895B /* ConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConverterViewController.m; sourceTree = "<group>"; };
+		5744C9FF14B44C490005A1E0 /* app_icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_57.png; path = ../app_icon_57.png; sourceTree = "<group>"; };
+		5744CA0114B44C500005A1E0 /* app_icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_114.png; path = ../app_icon_114.png; sourceTree = "<group>"; };
+		5744CA0314B44C5D0005A1E0 /* app_icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_72.png; path = ../app_icon_72.png; sourceTree = "<group>"; };
 		5767C2A91467B44D003A6349 /* MetricalConverterTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MetricalConverterTests-Info.plist"; sourceTree = "<group>"; };
 		5768F009146C3F6B00A55201 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = InfoPlist.strings; sourceTree = "<group>"; };
 		5768F00B146C3F6B00A55201 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Localizable.strings; sourceTree = "<group>"; };
@@ -198,6 +204,9 @@
 		5783216D1465B071007CE0B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5744CA0314B44C5D0005A1E0 /* app_icon_72.png */,
+				5744CA0114B44C500005A1E0 /* app_icon_114.png */,
+				5744C9FF14B44C490005A1E0 /* app_icon_57.png */,
 				5768F007146C3F6B00A55201 /* ru.lproj */,
 				57A0BD09146C2BAB00036E01 /* en.lproj */,
 				57E3AD41146B73F90097CEEF /* ConverterViewController_iPad.xib */,
@@ -300,6 +309,9 @@
 				57A0BD0F146C2BAB00036E01 /* Localizable.strings in Resources */,
 				5768F010146C3F6B00A55201 /* InfoPlist.strings in Resources */,
 				5768F011146C3F6B00A55201 /* Localizable.strings in Resources */,
+				5744CA0014B44C490005A1E0 /* app_icon_57.png in Resources */,
+				5744CA0214B44C500005A1E0 /* app_icon_114.png in Resources */,
+				5744CA0414B44C5D0005A1E0 /* app_icon_72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,10 +485,14 @@
 		578321621465A970007CE0B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MetricalConverter/MetricalConverter-Prefix.pch";
 				INFOPLIST_FILE = "MetricalConverter/MetricalConverter-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
